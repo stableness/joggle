@@ -1,0 +1,17 @@
+{
+  "name": "joggle",
+  "version": "1.0.0",
+  "private": true,
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "wabble          | pino-pretty -t SYS:HH:MM:ss",
+    "debug": "wabble -l debug | pino-pretty -t SYS:HH:MM:ss"
+  },
+  "dependencies": {
+    "@stableness/wabble": "~0.6"
+  },
+  "devDependencies": {
+    "@stableness/sieve-tray": "^0.3.7",
+    "pino-pretty": "^4.0.0"
+  }
+}
