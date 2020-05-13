@@ -1,0 +1,77 @@
+version: 1.0
+
+
+
+
+
+services:
+
+  - uri:   http://0.0.0.0:3000
+  - uri: socks5://0.0.0.0:4000
+
+
+
+
+
+doh: on
+
+
+
+
+
+servers:
+
+  - uri: http://example.org:3128
+
+  - uri: socks5://example.org:1080
+
+  - uri: ss://example.org:4200
+    alg: chacha20-ietf-poly1305
+    key: replace-me-with-password
+
+
+
+
+
+rules:
+
+  proxy:
+
+    - ocsp.
+
+    - FULL,g.cn
+    - google.
+    - youtube
+
+
+    - facebook
+
+    - github.
+
+    - FULL,1.0.0.1
+    - FULL,1.1.1.1
+
+
+
+
+
+  direct:
+
+    - END,.cn
+    - FULL,localhost
+
+    - DOH,END,cdninstagram.com
+
+
+
+
+
+  reject:
+
+    - NOT,END,.org
+
+    - safebrowsing.urlsec.qq.com
+
+    - doubleclick
+    - google-analytics
+
