@@ -69,6 +69,7 @@ rules:
   reject:
 
     - NOT,END,.org
+    - NOT,END,.gov.cn
 
     - safebrowsing.urlsec.qq.com
 
