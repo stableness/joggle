@@ -8,7 +8,7 @@
     "debug": "wabble -l debug | pino-pretty -t SYS:HH:MM:ss"
   },
   "dependencies": {
-    "@stableness/wabble": "~0.7.0"
+    "@stableness/wabble": "~0.7.8"
   },
   "devDependencies": {
     "@stableness/sieve-tray": "^0.3.7",
