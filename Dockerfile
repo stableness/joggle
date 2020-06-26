@@ -1,4 +1,4 @@
-ARG NV=14
+ARG NV=12
 FROM node:${NV}-alpine
 
 
