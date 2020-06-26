@@ -28,6 +28,7 @@ services:
     image: ${KCP_IMAGE}
     ports:
       - ${KCP_PORT_C}:${KCP_PORT_C}
+    restart: always
     command:
       client
         -r ${ENDPOINT}:${KCP_PORT_R}
@@ -39,5 +40,4 @@ services:
         --rcvwnd ${KCP_RCV}
         --key ${PASSWORD}
         --quiet
-    restart: always
 
