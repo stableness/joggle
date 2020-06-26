@@ -25,7 +25,11 @@ services:
 
 
   kcp:
-    image: ${KCP_IMAGE}
+    build:
+      context: .
+      dockerfile: ./kcp.Dockerfile
+      args:
+        PROXY: ''
     ports:
       - ${KCP_PORT_C}:${KCP_PORT_C}
     restart: always
