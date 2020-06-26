@@ -5,6 +5,7 @@
   "license": "GPL-3.0",
   "scripts": {
     "start": "wabble          | pino-pretty -t SYS:HH:MM:ss",
+    "trace": "wabble -l trace | pino-pretty -t SYS:HH:MM:ss",
     "debug": "wabble -l debug | pino-pretty -t SYS:HH:MM:ss"
   },
   "dependencies": {
