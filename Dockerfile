@@ -39,7 +39,9 @@ COPY package.json ./
 
 
 
-RUN npm install
+ARG NPM_REG=https://registry.npmjs.org
+
+RUN npm install --registry ${NPM_REG}
 
 
 
