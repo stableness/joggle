@@ -18,6 +18,7 @@ services:
       - ${PWD}/setting.yml:/opt/app/setting.yml
     depends_on:
       - kcp
+    restart: always
     command:
       npm start
 
