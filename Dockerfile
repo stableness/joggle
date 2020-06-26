@@ -8,7 +8,7 @@ FROM node:${NV}-alpine
 RUN echo start \
 \
     && REPO='/etc/apk/repositories' \
-    && sed -i 's|http://dl-cdn.alpinelinux.org|https://ftp.yzu.edu.tw/Linux|g' $REPO \
+    && sed -i 's|http://dl-cdn.alpinelinux.org|https://mirrors.aliyun.com|g' $REPO \
 \
     && apk add --no-cache --virtual .build-deps \
             git           \
