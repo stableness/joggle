@@ -15,7 +15,7 @@ services:
       - 3000:3000
       - 4000:4000
     volumes:
-      - ${PWD}/setting.yml:/opt/app/setting.yml
+      - ./setting.yml:/opt/app/setting.yml
     depends_on:
       - kcp
     restart: always
