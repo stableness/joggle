@@ -1,0 +1,39 @@
+version: "2"
+
+
+
+
+
+services:
+
+  joggle:
+    build: .
+    ports:
+      - 3000:3000
+      - 4000:4000
+    volumes:
+      - ${PWD}/setting.yml:/opt/app/setting.yml
+    depends_on:
+      - kcp
+    command:
+      npm start
+
+
+
+  kcp:
+    image: ${KCP_IMAGE}
+    ports:
+      - ${KCP_PORT_C}:${KCP_PORT_C}
+    command:
+      client
+        -r ${ENDPOINT}:${KCP_PORT_R}
+        -l :${KCP_PORT_C}
+        --crypt ${KCP_CRYPT}
+        --mode ${KCP_MODE}
+        --dscp ${KCP_DSCP}
+        --sndwnd ${KCP_SND}
+        --rcvwnd ${KCP_RCV}
+        --key ${PASSWORD}
+        --quiet
+    restart: always
+
