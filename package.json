@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@stableness/wabble": "~0.9.4",
-    "@stableness/sieve-tray": "^0.4.0",
+    "@stableness/sieve-tray": "~0.5.0",
     "pino-pretty": "^4.0.0"
   }
 }
