@@ -13,7 +13,16 @@ services:
 
 
 
-doh: true
+resolver:
+  
+  timeout: 80  # milliseconds
+
+  ttl:
+    min: 86400  # 1 day
+
+  upstream:
+    - uri:   tls://1.1.1.1            # DoT
+    - uri: https://1.1.1.1/dns-query  # DoH
 
 
 
@@ -60,7 +69,7 @@ rules:
     - END,.cn
     - FULL,localhost
 
-    - DOH,END,cdninstagram.com
+    - END,cdninstagram.com
 
 
 
