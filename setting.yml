@@ -15,10 +15,10 @@ services:
 
 resolver:
   
-  timeout: 80  # milliseconds
+  timeout: 80ms
 
   ttl:
-    min: 86400  # 1 day
+    min: 1d
 
   upstream:
     - uri:   tls://1.1.1.1            # DoT
